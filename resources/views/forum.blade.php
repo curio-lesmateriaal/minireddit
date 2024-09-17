@@ -11,7 +11,7 @@
     @foreach($redditPosts as $post)
         <div class="bg-white shadow-lg border border-black rounded-lg p-6 mb-8">
             {{-- <p class="text-italic">door: {{$post->user->name}}</p> --}}
-            <h3 class="text-2xl font-semibold mb-4">{{ $post->title }}</h3>
+            <h3 class="text-2xl font-semibold mb-4"><a href="/posts/{{$post->id}}">{{ $post->title }}</a></h3>
             <p class="text-gray-600 mb-4">Aantal upvotes:
                 <span id="upvotes-count-{{ $post->id }}" class="font-bold">{{ $post->upvotes }}</span>
             </p>
