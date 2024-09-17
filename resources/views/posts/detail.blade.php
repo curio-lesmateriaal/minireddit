@@ -19,6 +19,13 @@
             </button>
         </div>
 
+        <!-- Edit Button -->
+        <div class="mb-4">
+            <a href="{{$post->id}}/edit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                Edit Post
+            </a>
+        </div>
+
         <!-- Comments Section -->
         <h3 class="text-xl font-medium mb-6">Comments</h3>
         @forelse($post->comments as $comment)
@@ -31,10 +38,10 @@
 
                 <!-- Upvote and Downvote Buttons for Comments -->
                 <div class="flex items-center">
-                    <button  class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded mr-2">
+                    <button class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded mr-2">
                         Upvote Comment
                     </button>
-                    <button  class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">
+                    <button class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">
                         Downvote Comment
                     </button>
                 </div>

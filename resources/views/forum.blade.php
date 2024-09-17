@@ -1,7 +1,7 @@
 @extends('layouts.base')
 @section('content')
     <h1 class="text-4xl font-bold mb-6 text-center mt-6">Mini Reddit Forum</h1>
-
+    <a href="posts/create" class="rounded p-4 inline-block bg-indigo-500 text-white font-bold">Nieuwe post aanmaken</a>
     <h2 class="text-3xl font-bold mb-6">Posts
         <span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-red-500 text-white">
             {{ count($redditPosts) }}
