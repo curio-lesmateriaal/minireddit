@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>Minireddit</title>
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
@@ -73,14 +73,8 @@
                                             document.getElementById('background').classList.add('!hidden');
                                         "
                                     />
-                                    <img
-                                        src="https://laravel.com/assets/img/welcome/docs-dark.svg"
-                                        alt="Laravel documentation screenshot"
-                                        class="hidden aspect-video h-full w-full flex-1 rounded-[10px] object-top object-cover drop-shadow-[0px_4px_34px_rgba(0,0,0,0.25)] dark:block"
-                                    />
-                                    <div
-                                        class="absolute -bottom-16 -left-16 h-40 w-[calc(100%+8rem)] bg-gradient-to-b from-transparent via-white to-white dark:via-zinc-900 dark:to-zinc-900"
-                                    ></div>
+
+
                                 </div>
 
                                 <div class="relative flex items-center gap-6 lg:items-end">
@@ -114,7 +108,7 @@
                                     <h2 class="text-xl font-semibold text-black dark:text-white">Laracasts</h2>
 
                                     <p class="mt-4 text-sm/relaxed">
-                                        Laracasts offers thousands of video tutorials on Laravel, PHP, and JavaScript development. Check them out, see for yourself, and massively level up your development skills in the process.
+                                        Minireddit offers thousands of video tutorials on Laravel, PHP, and JavaScript development. Check them out, see for yourself, and massively level up your development skills in the process.
                                     </p>
                                 </div>
 
