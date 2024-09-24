@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AuthController;
 use App\Http\Controllers\PostsController;
 use App\Models\Post;
 use App\Models\Comment;
@@ -12,9 +13,15 @@ Route::get('/', function () {
 
 Route::resource('posts', PostsController::class);
 
+Route::get('/login', [AuthController::class, 'login'])->name('login');
+Route::post('/login', [AuthController::class, 'authenticate'])->name('authenticate');
+Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
+
+Route::get('/dashboard', function() {
+    return 'This is the dashboard!!!';
+})->middleware('auth');
+
 Route::get('/forum', function() {
-    // $comment = Comment::first();
-    // dd($comment->post->title);
     $redditPosts = Post::all();
     return view('forum')->with('redditPosts', $redditPosts);
 });
