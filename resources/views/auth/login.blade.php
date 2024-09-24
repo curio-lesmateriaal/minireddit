@@ -1,11 +1,9 @@
 @extends('layouts.base')
-
 @section('content')
     <div class="min-h-screen flex items-center justify-center bg-gray-100">
         <div class="w-full max-w-md">
             <div class="bg-white shadow-md rounded-lg px-8 py-6">
                 <h2 class="text-2xl font-bold text-center mb-6">Login</h2>
-
                 @if(session('status'))
                     <div class="bg-red-500 text-white p-2 rounded mb-4 text-center">
                         {{ session('status') }}
@@ -14,7 +12,6 @@
 
                 <form method="POST" action="{{ route('authenticate') }}">
                     @csrf
-
                     <div class="mb-4">
                         <label for="email" class="block text-gray-700 font-bold mb-2">Email</label>
                         <input id="email" type="email" name="email" value="{{ old('email') }}" required autofocus

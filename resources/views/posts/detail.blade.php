@@ -49,5 +49,37 @@
         @empty
             <p>No comments yet. Be the first to comment!</p>
         @endforelse
+        @auth
+        <div class="max-w-xl my-4 p-4 bg-white rounded-lg shadow-md">
+            <h3 class="text-lg font-semibold mb-2">Post a Comment</h3>
+
+            <form action="{{ route('createComment', $post->id) }} " method="POST">
+                @csrf
+              <!-- Message Input -->
+              <div class="mb-4">
+                <textarea
+                  name="comment"
+                  id="comment"
+                  rows="4"
+                  placeholder="Write your comment..."
+                  class="w-full p-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  required></textarea>
+              </div>
+
+              <!-- Submit Button -->
+              <div class="text-right">
+                <button
+                  type="submit"
+                  class="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                  Submit
+                </button>
+              </div>
+            </form>
+        </div>
+        @else
+            <a href="{{route('login')}}" class="text-blue-500 p-2">Log in om een comment te plaatsen!</a>
+        @endauth
+
+
     </div>
 @endsection

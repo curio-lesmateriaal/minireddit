@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\CommentsController;
 use App\Http\Controllers\PostsController;
 use App\Models\Post;
 use App\Models\Comment;
@@ -12,6 +13,8 @@ Route::get('/', function () {
 });
 
 Route::resource('posts', PostsController::class);
+Route::post('/posts/{post}/comments/create', [CommentsController::class, 'store'])
+            ->name('createComment');
 
 Route::get('/login', [AuthController::class, 'login'])->name('login');
 Route::post('/login', [AuthController::class, 'authenticate'])->name('authenticate');
